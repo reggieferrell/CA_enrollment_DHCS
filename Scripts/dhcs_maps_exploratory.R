@@ -35,9 +35,6 @@ packages <- c("haven", "ggplot2", "gapminder", "tidyverse", "dplyr", "stringr",
 invisible(lapply(packages, library, character.only = TRUE))
 
 
-my_api <- census_api_key("6b6805b560df241745c776e79e67fb6abe362db3", install = T, overwrite = T) #Install API key
-census_api <- census_api_key("6b6805b560df241745c776e79e67fb6abe362db3", install = T, overwrite = T) #Install API key
-
 #Import Source Data file from George's file
 source <- read_xlsx("/Users/rferrel/Documents/DHCS/Inputs/LEA BOP Enrollment and Demographics Pivot_Tables_v.1.1.xlsx", sheet = "Source Data") %>% 
   clean_names() %>% 
